@@ -6,7 +6,7 @@ import { mode } from "@chakra-ui/theme-tools";
 const styles = {
   globals: (props) => ({
     body: {
-      bg: mode("#E2DFD0", "#0C0C0C")(props),
+      bg: mode("#289372", "#000")(props),
       color: mode("#32012F", "#481E14")(props),
     },
   }),
@@ -18,4 +18,14 @@ const config = {
   useSystemColorMode: false,
 };
 
-export const theme = extendTheme({ config, styles });
+export const theme = extendTheme({
+  config,
+  styles: {
+    globals: (props) => ({
+      body: {
+        bg: mode("#289372", "#000")(props),
+        color: mode("#32012F", "#481E14")(props),
+      },
+    }),
+  },
+});
