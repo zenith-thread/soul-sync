@@ -7,9 +7,11 @@ import "./index.css";
 //                       Chakra UI
 // ===================================================
 import { ChakraProvider } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 
-// custom theme
-import { theme } from "./chakra_config.js";
+import { config, styles } from "./chakra_config.js";
+
+export const theme = extendTheme({ config, styles });
 
 // Browser Router
 import { BrowserRouter } from "react-router-dom";
